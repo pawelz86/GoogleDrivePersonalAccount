@@ -1,0 +1,19 @@
+spring:
+  profiles:
+    active: @spring.profiles.active@
+  output.ansi.enabled: ALWAYS
+  server.sessiontimeout: 1000
+  http:
+    multipart:
+        enabled: true
+        max-file-size: -1
+drive:
+  app-name: personalApp
+  fields-to-get: id,webContentLink,name,webViewLink,parents,permissions
+  errorPage: /index.html#/error
+  session-header-name: sessionid
+  base-uri: http://localhost:3000
+  redirect-to: http://localhost:8080/api/google/session
+  json-path: /tmp/client_secret.json
+  credentials-path: /tmp/test/
+  
